@@ -20,5 +20,5 @@ clean:
 	$(EXIST) main.o del $(OBJS)
 	$(EXIST) $(CMD:.exe=.ilk) del $(CMD:.exe=.ilk)
 	$(EXIST) $(CMD:.exe=.pdb) del $(CMD:.exe=.pdb)
-	$(EXIST) nul del *.tmp
 	$(EXIST) $(CMD).stackdump del $(CMD).stackdump
+	$(EXIST) nul del *.tmp nul
