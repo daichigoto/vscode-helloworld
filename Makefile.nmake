@@ -7,7 +7,7 @@ LINK=	link.exe
 LIBS=	
 LFLAGS=
 
-EXIST=	cmd.exe //C if exist
+EXIST=	cmd.exe /C if exist
 
 all: build
 
@@ -23,3 +23,4 @@ $(CMD).exe: $(CMD).obj
 clean:
 	$(EXIST) $(CMD).obj del *.obj
 	$(EXIST) $(CMD).exe del $(CMD).exe
+	dir
