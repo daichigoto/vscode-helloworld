@@ -1,0 +1,25 @@
+CMD=	helloworld
+
+CC=	cl.exe
+CFLAGS=	/c
+
+LINK=	link.exe
+LIBS=	
+LFLAGS=
+
+EXIST=	cmd.exe //C if exist
+
+all: build
+
+build: $(CMD).exe
+
+$(CMD).exe: $(CMD).obj
+	$(LINK) $(LFLAGS) $(LIBS) *.obj
+	dir
+
+.c.o:
+	$(CC) $(CFLAGS) $*.c
+
+clean:
+	$(EXIST) $(CMD).obj del *.obj
+	$(EXIST) $(CMD).exe del $(CMD).exe
