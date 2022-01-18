@@ -21,7 +21,8 @@ $(CMD).exe: $(CMD).obj
 	$(CC) $(CFLAGS) $*.c
 
 run:	build
-	chcp 65001	# Code Page Identifier 65001, Unicode (UTF-8)
+	chcp 65001
+	# Code Page Identifier 65001, Unicode (UTF-8)
 	$(CMD).exe
 
 clean:
