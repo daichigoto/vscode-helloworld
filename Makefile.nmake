@@ -9,9 +9,9 @@ LFLAGS=
 
 EXIST=	cmd.exe /C if exist
 
-all: build
+all:	build
 
-build: $(CMD).exe
+build:	$(CMD).exe
 
 $(CMD).exe: $(CMD).obj
 	$(LINK) $(LFLAGS) $(LIBS) *.obj
@@ -19,6 +19,9 @@ $(CMD).exe: $(CMD).obj
 
 .c.o:
 	$(CC) $(CFLAGS) $*.c
+
+run:	build
+	$(CMD).exe
 
 clean:
 	$(EXIST) $(CMD).obj del *.obj
